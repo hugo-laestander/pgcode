@@ -5,8 +5,8 @@ $(function () {
         //settings that are saved between sessions
         var PGSettings = function () {
             //this.showMirror=false;//default changed
-            this.fatLines=true;//default changed
-            this.showTravel=true;
+            this.fatLines=true; //default changed
+            this.showTravel=false; //default changed
             this.syncToProgress=true;
             this.orbitWhenIdle=false;
             this.antialias=true;
@@ -1029,9 +1029,9 @@ $(function () {
 
             //todo.
             bedVolume = {
-                width: 200,
+                width: 235,
                 height: 260,
-                depth: 200,
+                depth: 235,
                 origin: "lowerleft",
                 formFactor: "",//todo
             };
@@ -1076,7 +1076,6 @@ $(function () {
                 };
             }
         }
-
 
         function updateGridMesh(){
             //console.log("updateGridMesh");

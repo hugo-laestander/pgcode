@@ -6,6 +6,7 @@
             right: 35px;
             position: absolute;
             z-index:10;
+            opacity: 0;
         }
         .pgconnection {
             background: url("img/disconnected-icon.png") no-repeat scroll 0 0 transparent;
@@ -140,7 +141,7 @@
     </a></div>
 
     <div id="pgc2dcanvas" style='position: absolute;top:45px;left:25px;width:25%;height:25%;border:1px solid white'></div>
-    <input type="range" id="layer-slider" name="layer" min="0" value='100' max="100" orient="vertical" style="-webkit-appearance: slider-vertical;position:absolute;width:25px;right:35px;top:60px;bottom:35px;">
+    <input type="range" id="layer-slider" name="layer" min="0" value='100' max="100" orient="vertical" style="-webkit-appearance: slider-vertical;position:absolute;width:25px;right:35px;top:60px;bottom:35px;opacity:0.2;">
     <div style="position: absolute;left:1%;bottom:20px;">
     </div>
     <button class="pgsettingstoggle" title="Toggle settings window">&#9881</button>
@@ -159,16 +160,15 @@
             <div id='model-temp'  class='column'><span class="label">FAN</span><span>100%</span></div>            
         </div> -->
 
-        <div class='section'>
+        <!-- <div class='section'>
             <div id='model-done'  class='column'><span class="label">DONE</span><span id='status-done'>0%</span></div>
             <div id='model-layer'  class='column' style='flex-grow: 1;flex-shrink: 1;'><span class="label">LAYER</span><span id='status-layer'>-/-</span></div>
             <div id='model-elapsed'  class='column'><span class="label">ELAPSED</span><span id='status-elapsed'>00:00</span></div>
-            <!-- <div id='model-left'  class='column'><span class="label">LEFT</span><span>45m</span></div> -->
             <div id='model-left'  class='column' style='flex-grow: 2;flex-shrink: 2;'><span class="label">ETA</span><span id='status-eta'>00:00</span></div>
-        </div>
+        </div> -->
 
         
-        <div class='section'>
+        <!-- <div class='section'>
             <!-- <div id='model-name'  class='column' style='flex-grow: 5;flex-shrink: 5;'>
                 <span class="label">PLAYBACK</span>
                 <input type="checkbox" id="vehicle1" name="vehicle1" value="true">
@@ -181,8 +181,8 @@
             <!-- <div id='model-name'  class='column'>
                 <span class="label">PLAYBACK RATE</span>
                 <span>1.2x</span>
-            </div> -->
-        </div>        
+            </div>
+        </div>         -->
     </div>
 
     <style>
