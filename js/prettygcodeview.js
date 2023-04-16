@@ -16,7 +16,7 @@ $(function () {
 
             this.showNozzle=true;
             this.highlightCurrentLayer=true;
-            this.show2d=true;
+            this.show2d=false;
         };
         var pgSettings = new PGSettings();
         window.PGCSettings=pgSettings;
@@ -1029,9 +1029,9 @@ $(function () {
 
             //todo.
             bedVolume = {
-                width: 300,
-                height: 700,
-                depth: 300,
+                width: 200,
+                height: 260,
+                depth: 200,
                 origin: "lowerleft",
                 formFactor: "",//todo
             };
@@ -1098,7 +1098,7 @@ $(function () {
             color: 0x909090,
                 side: THREE.DoubleSide,
                 transparent: true,
-                opacity: 0.2,
+                opacity: 0.1,
             });
             var plane = new THREE.Mesh(planeGeometry, planeMaterial);
             plane.name="plane";
@@ -1108,13 +1108,13 @@ $(function () {
             //plane.quaternion.setFromEuler(new THREE.Euler(- Math.PI / 2, 0, 0));
             scene.add(plane);
             //make bed sized grid. 
-            var grid = new THREE.GridHelper(bedVolume.width, bedVolume.depth / 10, 0x000000, 0x888888);
+            var grid = new THREE.GridHelper(bedVolume.width, bedVolume.depth / (bedVolume.depth/20), 0x000000, 0x00000);
             grid.name="grid";
             //todo handle other than lowerleft
             if (bedVolume.origin == "lowerleft")
                 grid.position.set(bedVolume.width / 2, bedVolume.depth / 2, 0);
             //if (pgSettings.transparency){
-            grid.material.opacity = 0.6;
+            grid.material.opacity = 0.2;
             grid.material.transparent = true;
             grid.quaternion.setFromEuler(new THREE.Euler(-Math.PI / 2, 0, 0));
             scene.add(grid);
